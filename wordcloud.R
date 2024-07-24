@@ -11,7 +11,10 @@ library("wordcloud2")
 #Text mining
 
 ##Loading doc
-filepath = "D:/RWorks/Marketing_analytics/Data/suits_reviews.txt"
+filepath = "D:/RWorks/Marketing_analytics/Data/Loan_proposal_desperate.txt"
+
+#filepath = "D:/RWorks/Marketing_analytics/Data/budget_speech-1.txt"
+
 #filepath <- "http://www.sthda.com/sthda/RDoc/example-files/martin-luther-king-i-have-a-dream-speech.txt"
 text = readLines(filepath)
 docs <- Corpus(VectorSource(text))
@@ -54,4 +57,4 @@ head(d, 10)
 
 ## Generate wordcloud
 set.seed(1234)
-wordcloud(words = d$word, freq = d$freq, min.freq = 2,max.words=1000, random.order=FALSE, rot.per=0.25, colors=brewer.pal(8, "Dark2"))
+wordcloud(words = d$word, freq = d$freq, min.freq = 2,max.words=100, random.order=FALSE, rot.per=0.20, colors=brewer.pal(7, "Dark2"))
